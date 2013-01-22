@@ -1,0 +1,6 @@
+%div{id: :todos}
+:javascript
+  $(function() {
+    window.router = new TodoBackbone.Routers.TodosRouter({todos: #{@todos.to_json.html_safe}});
+    Backbone.history.start();
+  });
